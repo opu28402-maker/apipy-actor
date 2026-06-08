@@ -220,10 +220,10 @@ async def main():
 
         # ---- Output set করা (output_schema.json অনুযায়ী) ----
         output = {
-            "poetCount": poet_count,
-            "totalPoems": total_poems,
-            "datasetItemCount": dataset_item_count,
-            "failedPoets": failed_poets
+            "poetCount": str(poet_count),
+            "totalPoems": str(total_poems),
+            "datasetItemCount": str(dataset_item_count),
+            "failedPoets": ", ".join(failed_poets) if failed_poets else "None"
         }
 
         await Actor.set_value("OUTPUT", output)
