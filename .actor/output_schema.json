@@ -5,22 +5,26 @@
     "poetCount": {
       "type": "integer",
       "title": "Total Poets Scraped",
-      "description": "মোট কতজন কবির তথ্য scrape করা হয়েছে"
+      "description": "মোট কতজন কবির তথ্য scrape করা হয়েছে",
+      "template": "Total poets scraped: {{poetCount}}"
     },
     "totalPoems": {
       "type": "integer",
       "title": "Total Poems Found",
-      "description": "সব কবির মোট কতটি কবিতা পাওয়া গেছে"
+      "description": "সব কবির মোট কতটি কবিতা পাওয়া গেছে",
+      "template": "Total poems found: {{totalPoems}}"
     },
     "datasetItemCount": {
       "type": "integer",
       "title": "Dataset Rows",
-      "description": "Apify Dataset-এ মোট কতটি row save হয়েছে"
+      "description": "Apify Dataset-এ মোট কতটি row save হয়েছে",
+      "template": "Dataset rows: {{datasetItemCount}}"
     },
     "failedPoets": {
       "type": "array",
       "title": "Failed Poets",
       "description": "যেসব কবির তথ্য পাওয়া যায়নি তাদের নামের তালিকা",
+      "template": "Failed poets: {{failedPoets}}",
       "items": {
         "type": "string"
       }
