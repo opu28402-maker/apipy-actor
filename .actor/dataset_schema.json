@@ -1,0 +1,112 @@
+{
+  "actorSpecification": 1,
+  "fields": {
+    "নাম": {
+      "type": "string",
+      "title": "কবির নাম",
+      "description": "কবির পূর্ণ নাম",
+      "example": "রবীন্দ্রনাথ ঠাকুর"
+    },
+    "জন্ম তারিখ": {
+      "type": "string",
+      "title": "জন্ম তারিখ",
+      "description": "কবির জন্ম তারিখ",
+      "example": "৭ মে ১৮৬১"
+    },
+    "জন্মস্থান": {
+      "type": "string",
+      "title": "জন্মস্থান",
+      "description": "কবির জন্মস্থান",
+      "example": "কলকাতা, ভারত"
+    },
+    "বর্তমান নিবাস": {
+      "type": "string",
+      "title": "বর্তমান নিবাস",
+      "description": "কবির বর্তমান বাসস্থান",
+      "example": ""
+    },
+    "পেশা": {
+      "type": "string",
+      "title": "পেশা",
+      "description": "কবির পেশা",
+      "example": "কবি, সাহিত্যিক"
+    },
+    "শিক্ষাগত যোগ্যতা": {
+      "type": "string",
+      "title": "শিক্ষাগত যোগ্যতা",
+      "description": "কবির শিক্ষাগত যোগ্যতা",
+      "example": ""
+    },
+    "profile_url": {
+      "type": "string",
+      "title": "Profile URL",
+      "description": "bangla-kobita.com-এ কবির profile page এর URL",
+      "example": "https://www.bangla-kobita.com/rabindranath/"
+    },
+    "কবিতার তারিখ": {
+      "type": "string",
+      "title": "কবিতা প্রকাশের তারিখ",
+      "description": "কবিতা কবে প্রকাশিত হয়েছে",
+      "example": "২০২৪-০১-১৫"
+    },
+    "কবিতার শিরোনাম": {
+      "type": "string",
+      "title": "কবিতার শিরোনাম",
+      "description": "কবিতার নাম/শিরোনাম",
+      "example": "গীতাঞ্জলি"
+    },
+    "কবিতার URL": {
+      "type": "string",
+      "title": "কবিতার URL",
+      "description": "কবিতার সরাসরি link",
+      "example": "https://www.bangla-kobita.com/rabindranath/gitanjali/"
+    },
+    "মন্তব্য সংখ্যা": {
+      "type": "string",
+      "title": "মন্তব্য সংখ্যা",
+      "description": "কবিতায় মোট মন্তব্যের সংখ্যা",
+      "example": "5"
+    },
+    "error": {
+      "type": "string",
+      "title": "Error",
+      "description": "কবি খুঁজে না পাওয়া গেলে error message",
+      "example": "Poet not found on bangla-kobita.com",
+      "nullable": true
+    }
+  },
+  "views": {
+    "overview": {
+      "title": "Overview",
+      "description": "কবির তথ্য ও কবিতার সারসংক্ষেপ",
+      "transformation": {
+        "fields": [
+          "নাম",
+          "জন্ম তারিখ",
+          "জন্মস্থান",
+          "পেশা",
+          "কবিতার শিরোনাম",
+          "কবিতার তারিখ",
+          "মন্তব্য সংখ্যা"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "নাম": {
+            "label": "কবির নাম",
+            "format": "text"
+          },
+          "কবিতার শিরোনাম": {
+            "label": "কবিতা",
+            "format": "text"
+          },
+          "কবিতার তারিখ": {
+            "label": "তারিখ",
+            "format": "text"
+          }
+        }
+      }
+    }
+  }
+}

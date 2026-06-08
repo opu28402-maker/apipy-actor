@@ -1,0 +1,22 @@
+{
+  "title": "Bangla Kobita Poet Scraper Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "poet_names": {
+      "title": "Poet Names",
+      "type": "array",
+      "description": "List of poet names to search and scrape from bangla-kobita.com",
+      "editor": "stringList",
+      "example": ["রবীন্দ্রনাথ ঠাকুর", "কাজী নজরুল ইসলাম"]
+    },
+    "max_poems": {
+      "title": "Max Poems Per Poet",
+      "type": "integer",
+      "description": "Maximum number of poems to scrape per poet. Set to 0 for all poems.",
+      "default": 0,
+      "minimum": 0
+    }
+  },
+  "required": ["poet_names"]
+}

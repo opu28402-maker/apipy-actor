@@ -1,0 +1,28 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Output CSV (local test এর সময় তৈরি হয়)
+*.csv
+
+# Apify storage (local run এর সময় তৈরি হয়)
+storage/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Secrets / env
+.env

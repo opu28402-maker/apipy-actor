@@ -1,0 +1,28 @@
+{
+  "actorSpecification": 1,
+  "properties": {
+    "poetCount": {
+      "type": "integer",
+      "title": "Total Poets Scraped",
+      "description": "মোট কতজন কবির তথ্য scrape করা হয়েছে"
+    },
+    "totalPoems": {
+      "type": "integer",
+      "title": "Total Poems Found",
+      "description": "সব কবির মোট কতটি কবিতা পাওয়া গেছে"
+    },
+    "datasetItemCount": {
+      "type": "integer",
+      "title": "Dataset Rows",
+      "description": "Apify Dataset-এ মোট কতটি row save হয়েছে"
+    },
+    "failedPoets": {
+      "type": "array",
+      "title": "Failed Poets",
+      "description": "যেসব কবির তথ্য পাওয়া যায়নি তাদের নামের তালিকা",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
