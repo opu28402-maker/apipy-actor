@@ -117,7 +117,7 @@ def scrape_profile(profile_url: str, max_poems: int = 0) -> list[dict]:
         if max_poems > 0 and count >= max_poems:
             break
 
-        date_td    = tr.find("td", class_="DatePublished")
+        date_td    = tr.find("td", class_="DateStamp")
         title_a    = tr.select_one("a.Title")
         comment_td = tr.find("td", class_="CommentCount")
 
@@ -125,8 +125,14 @@ def scrape_profile(profile_url: str, max_poems: int = 0) -> list[dict]:
             continue
 
         row_data = info.copy()
+        
+        # Format the ISO date string if needed, or just take the text
+        raw_date = date_td.get_text(strip=True)
+        if "T" in raw_date:
+            raw_date = raw_date.split("T")[0]
+
         row_data.update({
-            "কবিতার তারিখ": date_td.get_text(strip=True),
+            "কবিতার তারিখ": raw_date,
             "কবিতার শিরোনাম": title_a.get_text(strip=True),
             "কবিতার URL": urljoin(BASE_URL, title_a.get("href", "")),
             "মন্তব্য সংখ্যা": comment_td.get_text(strip=True)
