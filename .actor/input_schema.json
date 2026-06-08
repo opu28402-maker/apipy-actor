@@ -8,6 +8,7 @@
       "type": "array",
       "description": "List of poet names to search and scrape from bangla-kobita.com",
       "editor": "stringList",
+      "prefill": ["বিজয়া"],
       "example": ["রবীন্দ্রনাথ ঠাকুর", "কাজী নজরুল ইসলাম"]
     },
     "max_poems": {
